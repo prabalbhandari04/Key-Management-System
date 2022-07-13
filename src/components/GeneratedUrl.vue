@@ -21,6 +21,8 @@
                 <h4 class="title">How it works?</h4>
                 <p class="text">The URL contains an unreadable string of characters containing your encrypted passwords. So your data remains in the URL and not on any server.</p>
 
+                 <h4 class="title">Want a Backup</h4>
+                <p class="text">KMS has its own Backup web application, create an account and save your URL and Keys now </p>
                 <div class="url">
                     <span class="domain" data-label="Our application">{{ origin }}</span>
                     <span class="path" data-label="Your passwords">{{ path }}</span>
