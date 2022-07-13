@@ -87,7 +87,7 @@ const router = new VueRouter({
 });
 
 // Set a dynamic web title on change view.
-const baseTitle = 'MyKeys';
+const baseTitle = 'kms_rd';
 const titleSeparator = ' | ';
 router.beforeEach((to, _, next) => {
     document.title = to.meta.title ? 

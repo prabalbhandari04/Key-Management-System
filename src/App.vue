@@ -3,7 +3,7 @@
         <Notification/>
         <Navbar />
         <router-view></router-view>
-        <Credits/>
+        <Footer />
     </Container>
 </template>
 
@@ -11,11 +11,12 @@
 
 import Navbar from '@/components/Navbar';
 
-import Credits from '@/components/Credits';
+import Footer from '@/components/Footer';
+
 
 export default {
     name: 'App',
-    components: { Navbar, Credits }
+    components: { Navbar, Footer }
 }
 </script>
 

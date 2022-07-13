@@ -6,7 +6,7 @@
   <li><a href="#contact">Quick Guide</a></li>
   <li> <router-link to = "/m">Test</router-link></li>
 
-  <li style="float:right"> <router-link to = "/l" class="active">Login / Sign Up</router-link></li>
+  <li style="float:right"> <router-link to = "/l" class="active">Back Up</router-link></li>
  
 </ul>
 </nav>
