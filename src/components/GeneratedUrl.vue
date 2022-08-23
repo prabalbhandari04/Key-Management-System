@@ -5,11 +5,13 @@
                 <div class="header">
                     <i class="icon fi fi-check"></i>
                     <h3 class="title">Success!</h3>
-                    <p class="text">Click on the following button to copy your encrypted password URL. Share or save the link as a bookmark to use your encrypted passwords later!</p>
+                    <p class="text">The credntials stored in plain text format are converted to encrypted URL.
+                        Sign to keep the backup of URLs and Keys.
+                    </p>
                 </div>
 
                 <Button class="copy primary" @click="copy">
-                    <i class="fi left fi-copy"></i> Copy my password URL!
+                    <i class="fi left fi-copy"></i> Copy URL!
                 </Button>
                 <small class="link">
                     <router-link :to="{ name: 'decrypt', params: { blob }}">Open now</router-link>
@@ -18,15 +20,15 @@
         </template>
         <template v-slot:extra>
             <div class="extra">
-                <h4 class="title">How it works?</h4>
-                <p class="text">The URL contains an unreadable string of characters containing your encrypted passwords. So your data remains in the URL and not on any server.</p>
-
+                <h4>The generated URL is: </h4>
+                 <div class="url">
+                    <span class="domain" data-label="Link">{{ origin }}</span>
+                    <span class="path" data-label="Encrypted URL">{{ path }}</span>
+                </div>
+               
                  <h4 class="title">Want a Backup</h4>
                 <p class="text">KMS has its own Backup web application, create an account and save your URL and Keys now </p>
-                <div class="url">
-                    <span class="domain" data-label="Our application">{{ origin }}</span>
-                    <span class="path" data-label="Your passwords">{{ path }}</span>
-                </div>
+               
             </div>
         </template>
     </Box>
@@ -142,7 +144,7 @@ export default {
 
 
 .generated-url .extra .url .domain {
-    color: #777;
+   color: blue;
 }
 
 .generated-url .extra .url .path {

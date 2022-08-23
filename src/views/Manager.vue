@@ -2,7 +2,7 @@
     <div>
         <HelpMessage>
             <template v-slot:content>
-                <p>Enter up to 10 passwords, including its aliases, usernames and descriptions. When you have finished, click on the <i>Encrypt and save</i> button..</p>
+                <p>Enter all the sensitive credential data with required information and click <b>Encrypt and save</b> </p>
             </template>
             <template v-slot:action>
                 <Button 
@@ -39,7 +39,7 @@
         
         <center>
             <Button v-if="items.length < 10" @click="append">
-                <i class="fi fi-plus-a"></i> Add new password
+                <i class="fi fi-plus-a"></i> Add new credential data
             </Button>
         </center>
     </div>
@@ -65,7 +65,7 @@ export default {
             { key: 'alias', length: 20, copyable: false, placeholder: 'Example credentials' },
             { key: 'username', length: 25, copyable: true, placeholder: 'myusername' },
             { key: 'password', length: 25, copyable: true, placeholder: 'myp4ssw0rd' },
-            { key: 'description', length: 50, copyable: false, placeholder: 'https://myservi.ce/login' },
+            { key: 'link', length: 50, copyable: false, placeholder: 'https://myservi.ce/login' },
             { key: 'Recorded By', length: 50, copyable: false, placeholder: 'Name here' }
         ],
         items: []
@@ -75,7 +75,7 @@ export default {
     },
     methods: {
         append() {
-            const a = { alias: null, username: null, password: null, description: null };
+            const a = { alias: null, username: null, password: null, link: null };
             this.items.push(a);
         },
         success() {

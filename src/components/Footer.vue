@@ -11,11 +11,10 @@ export default {
 
 <style scoped>
   footer {
-   position: fixed;
-   left: 0;
+   position:fixed;
    bottom: 0;
    width: 100%;
-   background-color: red;
+   background-color: #4b59f7;
    color: white;
    text-align: center;
    height: 60px;

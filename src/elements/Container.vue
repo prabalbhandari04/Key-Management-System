@@ -21,11 +21,14 @@ body {
 body > * {
     display: inline-block;
     vertical-align: top;
+    background-color: #FFF;
 }
 
 .container {
     display: block;
     margin: 0 auto;
     max-width: 1200px;
+    background: #FFF;
+
 }
 </style>

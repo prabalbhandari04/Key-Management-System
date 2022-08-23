@@ -1,12 +1,12 @@
 <template>
     <div>
         <PasswordForm 
-            description="Type your master passsword to decrypt your URL and get your passwords."
+            link="Type your master passsword to decrypt your URL and get your passwords."
             placeholder="Type your master password"
             @error="error"
             @submit="decrypt">
             <template v-slot:button>
-                <i class="fi left fi-unlocked"></i> Decrypt!
+<i class="fa-solid fa-lock-open"></i> Decrypt!
             </template>
         </PasswordForm>
     </div>

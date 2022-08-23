@@ -1,7 +1,7 @@
 <template>
     <div>
         <PasswordForm 
-            description="Type your master passsword to encrypt your passwords and get your URL."
+            link="Insert a key to encrypt the credentials to a URL."
             placeholder="Type your master password" 
             @error="error"
             @submit="encrypt"
@@ -14,7 +14,7 @@
             <template v-slot:button>
 
                 
-                <i class="fi left fi-locked"></i> Encrypt!
+              <i class="fa-solid fa-lock"></i> Encrypt!
             </template>
         </PasswordForm>
         

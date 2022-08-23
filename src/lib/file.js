@@ -8,7 +8,7 @@ class FileAPI {
             a: item.alias,
             u: item.username,
             p: item.password,
-            d: item.description
+            d: item.link
         }));
           
         return Serializer.encode(temp);
@@ -21,7 +21,7 @@ class FileAPI {
             alias: item.a,
             username: item.u,
             password: item.p,
-            description: item.d
+            link: item.d
         }));
     }
 

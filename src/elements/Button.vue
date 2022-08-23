@@ -42,7 +42,7 @@ button.icon {
 }
 
 button.primary {
-    background: linear-gradient(135deg, #ea00fb 0%, #090979 35%, #0095ff 100%);;
+    background: #4b59f7;
     color: white;
 }
 

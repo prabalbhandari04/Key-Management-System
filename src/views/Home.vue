@@ -1,6 +1,6 @@
 <template>
     <div>
-        <Jumbo v-bind="{ picture, title, description }"/>
+        <Jumbo v-bind="{ picture, title, link }"/>
         
         <QuickStart/>
     </div>

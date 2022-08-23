@@ -52,7 +52,7 @@ export default {
     margin: 2vh 0;
     padding: 10px 20px;
     background: #bdc3c7;
-    color: black;
+    color: #fff;
     z-index: 100;
     transform: translateX(-50%);
     transition: all .2s ease-in-out;

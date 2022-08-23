@@ -1,4 +1,5 @@
 <template>
+<body>
     <Box class="quickstart">
         <template v-slot:content>
             <h2>Quick Start</h2>
@@ -12,7 +13,7 @@
                 </template>
             </Step>
             <Step :index="2">
-                <template v-slot:content>Enter up to 10 passwords, including its aliases, usernames and descriptions and encrypt them with your master password.</template>
+                <template v-slot:content>Enter up to 10 passwords, including its aliases, usernames and links and encrypt them with your master password.</template>
                 <template v-slot:action><Icon class="fi fi-locked"></Icon></template>
             </Step>
             <Step :index="3">
@@ -21,6 +22,7 @@
             </Step>
         </template>
     </Box>
+    </body>
 </template>
 
 <script>
@@ -36,6 +38,7 @@ export default {
 </script>
 
 <style scoped>
+
 .quickstart {
     display: block;
     margin: 5vh auto;

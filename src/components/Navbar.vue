@@ -1,12 +1,13 @@
 <template>
 <nav>
  <ul>
-  <li> <router-link to = "/">Home</router-link></li>
-  <li><a href="#news">Docs</a></li>
-  <li><a href="#contact">Quick Guide</a></li>
-  <li> <router-link to = "/m">Test</router-link></li>
+  <li style="float:left"> <router-link to = "/l" class="active">Project KMS</router-link></li>
+  <li style="float:left"> <router-link to = "/" class="active">Home</router-link></li>
+  <li style="float:left"> <router-link to = "#contact" class="active">Quick Quide</router-link></li>
 
-  <li style="float:right"> <router-link to = "/l" class="active">Back Up</router-link></li>
+
+
+  <li style="float:right"> <router-link to = "/l" class="active">Log In</router-link></li>
  
 </ul>
 </nav>
@@ -40,11 +41,16 @@ ul {
   margin: 0;
   padding: 0;
   overflow: hidden;
-  background-color: #333;
-}
+  background-color:transparent;
+  height: 80px;
+  display: flex;
+  justify-content: center;
+} 
 
 li {
   float: left;
+  width: 100%;
+
 }
 
 li a {
@@ -60,7 +66,7 @@ li a:hover:not(.active) {
 }
 
 .active {
-  background-color: #04AA6D;
+  background-color: #4b59f7;
 }
 
 </style>

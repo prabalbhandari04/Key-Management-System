@@ -1,9 +1,9 @@
 <template>
     <Box class="password-form">
         <template v-slot:content>
-            <div class="header" v-if="description">
-                <i class="icon fi fi-key"></i>
-                <p class="description">{{ description }}</p>
+            <div class="header" v-if="link">
+                <i class="fa-solid fa-key-skeleton"></i>
+                <p class="link">{{ link }}</p>
             </div>
             <form class="content" v-on:submit.prevent="submit">
                 <div class="field">
@@ -19,8 +19,8 @@
                         @error="error" />
                     
                     <ul class="requirements">
-                        <li :class="{ 'completed': hasLetter, 'required': !hasLetter && submitted }">At least one letter.</li>
-                        <li :class="{ 'completed': hasNumber, 'required': !hasNumber && submitted }">At least one number.</li>
+                        <li :class="{ 'completed': hasLetter, 'required': !hasLetter && submitted }">At least one number and one letter.</li>
+       
                         <li :class="{ 'completed': minLength, 'required': !minLength && submitted }">At least eight characters.</li>
                     </ul>
                 </div>
@@ -44,7 +44,7 @@ import Button from '@/elements/Button';
 export default {
     name: 'PasswordForm',
     props: {
-        description: {
+        link: {
             type: String,
             default: ''
         },
@@ -100,31 +100,35 @@ export default {
 <style scoped>
 .password-form {
     display: block;
+    background-color: #4b59f7;
     padding: 10px 20px;
     margin: 10vh auto 20px;
     max-width: 600px;
-    width: 96%;
+    width: 100%;
+    
 }
 
 .password-form .header {
     display: block;
     text-align: center;
     margin: 3vh 0;
+    
 }
 
 .password-form .header .icon {
     font-size: 3em;
     margin-bottom: 3vh;
-    color: #777;
+    color: #fff;
 }
 
-.password-form .header .description {
-    color: #777;
+.password-form .header .link {
+    color: #fff;
     font-style: italic;
     font-size: .9em;
 }
 
 .password-form .content {
+
     display: flex;
     width: 100%;
     flex-wrap: nowrap;
@@ -133,13 +137,14 @@ export default {
 }
 
 .password-form .content .field {
+    
     flex-grow: 1;
     width: 60%;
     margin-right: 2vw;
 }
 
 .password-form .content .field .requirements {
-    color: #777;
+    color: #fff;
     display: inline-block;
     vertical-align: top;
     font-size: .8em;
